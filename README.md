@@ -2,7 +2,7 @@
 
 **Prompt-engineered detection of misleading sustainability claims from product text and packaging images, using the OpenAI API.**
 
-Greenwashing — making a product look more environmentally friendly than it really is — is hard to catch at scale. Vague phrases like *"eco-friendly"* or *"planet-conscious"*, green colour schemes, and leafy imagery can imply sustainability without any real evidence behind them. Traditional keyword filters miss this because greenwashing lives in *context*, not just words.
+Greenwashing making a product look more environmentally friendly than it really is is hard to catch at scale. Vague phrases like *"eco-friendly"* or *"planet-conscious"*, green colour schemes, and leafy imagery can imply sustainability without any real evidence behind them. Traditional keyword filters miss this because greenwashing lives in *context*, not just words.
 
 **Greenwashing Radar** uses a multimodal Large Language Model to read both the **text** and the **packaging image** of a product, then returns a structured, explainable assessment: what claims were made, how specific they are, and a **greenwashing risk score (0–5)** with a written justification and the exact evidence it relied on.
 
@@ -98,4 +98,4 @@ The project explicitly discusses fairness and bias, data privacy, the UK **Green
 
 ---
 
-*Author: Viraj Vataria — MSc Business Analytics, University of Exeter.*
+*Author: Viraj Vataria*
