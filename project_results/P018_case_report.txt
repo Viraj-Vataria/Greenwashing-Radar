@@ -1,0 +1,159 @@
+====================================================================================================
+SAMPLE ID: P018
+PRODUCT: Galettes boulghour & épeautre
+BRAND: Céréal Bio
+QUERY: natural
+IMAGE URL: https://images.openfoodfacts.org/images/products/317/568/102/8098/front_fr.121.400.jpg
+----------------------------------------------------------------------------------------------------
+TEXT BLOB:
+Product name: Galettes boulghour & épeautre
+Brand: Céréal Bio
+Generic name: Spécialité végétale à base de blé et d'épeautre, issue de l'agriculture biologique
+Ingredients: Boulgour de blé complet réhydraté 43,5%, petit épeautre cuit (blé) 13,2%, carottes 6%, farine de blé 5,1%, oignons 4,6%, huiles végétales (huile de tournesol oléique, huile de tournesol), concentré de tomates 3,9%, flocons d'avoine complète 3,7%, poivrons rouges 3,2%, gluten de blé 2,8%, flocons de blé complet 2,3%, céleri rave 14%, ail, raisins secs, sel de mer, épices.
+Labels: Organic,Vegetarian,Certified by Ecocert,EU Organic,No preservatives,Non-EU Agriculture,Source of fibre,Vegan,Cooked in France,ES-ECO-019-CT,EU Agriculture,EU/non-EU Agriculture,FR-BIO-01,High fibres,Natural colorings,No additives,No colorings,Nutriscore,Nutriscore Grade A,AB Agriculture Biologique,fr:Blé français
+Categories: Meat alternatives,Vegetarian patties,Cereals and vegetables patties
+Packaging: Carton,Sous atmosphère protectrice,Etui en carton,Film plastique,Plastique recyclable,Sec
+----------------------------------------------------------------------------------------------------
+METHOD: heuristic_text
+CLAIM DETECTED: True
+CLAIM MODALITIES: ["text"]
+CLAIM TYPES: ["recyclable", "organic_or_natural", "plant_based", "certification_or_label", "vague_eco_language"]
+SPECIFICITY: vague
+EVIDENCE STRENGTH: weak
+RISK SCORE: 3
+RISK LABEL: medium
+EVIDENCE COUNT: 3
+REASONING SUMMARY: Heuristic baseline matched sustainability-related keywords in text.
+RAW JSON:
+{
+  "claim_detected": true,
+  "claim_modalities": [
+    "text"
+  ],
+  "claim_types": [
+    "recyclable",
+    "organic_or_natural",
+    "plant_based",
+    "certification_or_label",
+    "vague_eco_language"
+  ],
+  "specificity": "vague",
+  "evidence_strength": "weak",
+  "risk_score": 3,
+  "risk_label": "medium",
+  "evidence": [
+    {
+      "modality": "text",
+      "snippet": "recyclable",
+      "explanation": "Keyword matched in product text."
+    },
+    {
+      "modality": "text",
+      "snippet": "organic",
+      "explanation": "Keyword matched in product text."
+    },
+    {
+      "modality": "text",
+      "snippet": "vegan",
+      "explanation": "Keyword matched in product text."
+    }
+  ],
+  "reasoning_summary": "Heuristic baseline matched sustainability-related keywords in text.",
+  "needs_human_check": [
+    "Heuristic baseline may miss image-only cues and nuanced wording."
+  ]
+}
+----------------------------------------------------------------------------------------------------
+METHOD: llm_text
+CLAIM DETECTED: True
+CLAIM MODALITIES: ["text"]
+CLAIM TYPES: ["organic_or_natural", "certification_or_label", "vague_eco_language"]
+SPECIFICITY: specific
+EVIDENCE STRENGTH: strong
+RISK SCORE: 2
+RISK LABEL: low
+EVIDENCE COUNT: 3
+REASONING SUMMARY: The product makes multiple specific and verifiable claims related to organic certification and natural ingredients, supported by recognized labels. Additional claims about no preservatives and natural colorings are specific but lack detailed substantiation in the text. The overall positioning is health- and nature-oriented but not exaggerated or vague. Therefore, the greenwashing risk is low (score 2).
+RAW JSON:
+{
+  "claim_detected": true,
+  "claim_modalities": [
+    "text"
+  ],
+  "claim_types": [
+    "organic_or_natural",
+    "certification_or_label",
+    "vague_eco_language"
+  ],
+  "specificity": "specific",
+  "evidence_strength": "strong",
+  "risk_score": 2,
+  "risk_label": "low",
+  "evidence": [
+    {
+      "modality": "text",
+      "snippet": "Organic, Certified by Ecocert, EU Organic, AB Agriculture Biologique, FR-BIO-01, ES-ECO-019-CT, EU Agriculture, EU/non-EU Agriculture",
+      "explanation": "Multiple organic certifications and labels indicate a specific and verifiable claim about organic agriculture."
+    },
+    {
+      "modality": "text",
+      "snippet": "No preservatives, No additives, No colorings, Natural colorings",
+      "explanation": "Claims about absence of preservatives, additives, and use of natural colorings are specific but not quantified or further substantiated here."
+    },
+    {
+      "modality": "text",
+      "snippet": "Vegetarian, Vegan, Source of fibre, High fibres",
+      "explanation": "These are product attribute claims that relate to dietary and nutritional aspects, supporting a natural and health-oriented positioning."
+    }
+  ],
+  "reasoning_summary": "The product makes multiple specific and verifiable claims related to organic certification and natural ingredients, supported by recognized labels. Additional claims about no preservatives and natural colorings are specific but lack detailed substantiation in the text. The overall positioning is health- and nature-oriented but not exaggerated or vague. Therefore, the greenwashing risk is low (score 2).",
+  "needs_human_check": []
+}
+----------------------------------------------------------------------------------------------------
+METHOD: llm_multimodal
+CLAIM DETECTED: True
+CLAIM MODALITIES: ["text", "image"]
+CLAIM TYPES: ["organic_or_natural", "certification_or_label", "plant_based"]
+SPECIFICITY: specific
+EVIDENCE STRENGTH: strong
+RISK SCORE: 1
+RISK LABEL: low
+EVIDENCE COUNT: 3
+REASONING SUMMARY: The product makes clear, specific claims about being organic and plant-based, supported by recognized certifications visible on the packaging. The claims are specific and verifiable, reducing greenwashing risk. The packaging uses natural imagery but does not rely solely on vague nature cues. The risk score is low (1) due to the strong organic certification and clear plant-based claim, with no broad or unsupported claims present.
+RAW JSON:
+{
+  "claim_detected": true,
+  "claim_modalities": [
+    "text",
+    "image"
+  ],
+  "claim_types": [
+    "organic_or_natural",
+    "certification_or_label",
+    "plant_based"
+  ],
+  "specificity": "specific",
+  "evidence_strength": "strong",
+  "risk_score": 1,
+  "risk_label": "low",
+  "evidence": [
+    {
+      "modality": "text",
+      "snippet": "issue de l'agriculture biologique, Organic, Certified by Ecocert, EU Organic, AB Agriculture Biologique",
+      "explanation": "Multiple organic certifications and labels explicitly indicate organic farming practices."
+    },
+    {
+      "modality": "text",
+      "snippet": "Spécialité végétale à base de blé et d'épeautre",
+      "explanation": "The product is explicitly described as a plant-based specialty, indicating a sustainability-related positioning."
+    },
+    {
+      "modality": "image",
+      "snippet": "AB logo (Agriculture Biologique) and 'Céréal BIO' brand name",
+      "explanation": "The packaging shows the official organic certification logo and brand name emphasizing organic nature."
+    }
+  ],
+  "reasoning_summary": "The product makes clear, specific claims about being organic and plant-based, supported by recognized certifications visible on the packaging. The claims are specific and verifiable, reducing greenwashing risk. The packaging uses natural imagery but does not rely solely on vague nature cues. The risk score is low (1) due to the strong organic certification and clear plant-based claim, with no broad or unsupported claims present.",
+  "needs_human_check": []
+}
+----------------------------------------------------------------------------------------------------

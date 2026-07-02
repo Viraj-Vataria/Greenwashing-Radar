@@ -1,0 +1,154 @@
+====================================================================================================
+SAMPLE ID: P005
+PRODUCT: Boisson à l’avoine
+BRAND: Alpro
+QUERY: vegan
+IMAGE URL: https://images.openfoodfacts.org/images/products/541/118/811/5366/front_en.270.400.jpg
+----------------------------------------------------------------------------------------------------
+TEXT BLOB:
+Product name: Boisson à l’avoine
+Brand: Alpro
+Generic name: Boisson à l'avoine avec calcium et vitamines ajoutés
+Ingredients: Eau, avoine 10%, huile de tournesol, calcium, fibres de chicorée, sel marin de table, stabilisant : gomme gellane, iodure de potassium, vitamines B2, B9, D2
+Labels: Végétarien,Sans conservateurs,Source de fibres alimentaires,Végétalien,100% végétal,Source de calcium,Entreprise B certifiée,Agriculture UE,Union Végétarienne Européenne,Union Végétarienne Européenne Végétalien,FSC,FSC Mix,Point Vert,Riche en fibres,Sans sucre ajouté,Sans colorants,Sans lactose,Sans acides gras trans,Nutriscore,Nutriscore A,Riche en vitamine B,Source de vitamine B12,Source de vitamine D,À l'huile de tournesol,Sans ajout de produit laitiers,Sans édulcorants,Triman,Vegan Cert
+Categories: Boissons et préparations de boissons,Aliments et boissons à base de végétaux,Boissons,Aliments d'origine végétale,Céréales et pommes de terre,Substituts de produits laitiers,Céréales et dérivés,Substituts du lait,Boissons à base de végétaux,Boissons végétales,Boissons végétales de céréales,Boissons sans sucre ajouté,Boissons à l'avoine,Boisson avoine
+Packaging: en:composite-carton
+----------------------------------------------------------------------------------------------------
+METHOD: heuristic_text
+CLAIM DETECTED: True
+CLAIM MODALITIES: ["text"]
+CLAIM TYPES: ["plant_based", "certification_or_label"]
+SPECIFICITY: specific
+EVIDENCE STRENGTH: weak
+RISK SCORE: 2
+RISK LABEL: low
+EVIDENCE COUNT: 2
+REASONING SUMMARY: Heuristic baseline matched sustainability-related keywords in text.
+RAW JSON:
+{
+  "claim_detected": true,
+  "claim_modalities": [
+    "text"
+  ],
+  "claim_types": [
+    "plant_based",
+    "certification_or_label"
+  ],
+  "specificity": "specific",
+  "evidence_strength": "weak",
+  "risk_score": 2,
+  "risk_label": "low",
+  "evidence": [
+    {
+      "modality": "text",
+      "snippet": "vegan",
+      "explanation": "Keyword matched in product text."
+    },
+    {
+      "modality": "text",
+      "snippet": "fsc",
+      "explanation": "Keyword matched in product text."
+    }
+  ],
+  "reasoning_summary": "Heuristic baseline matched sustainability-related keywords in text.",
+  "needs_human_check": [
+    "Heuristic baseline may miss image-only cues and nuanced wording."
+  ]
+}
+----------------------------------------------------------------------------------------------------
+METHOD: llm_text
+CLAIM DETECTED: True
+CLAIM MODALITIES: ["text"]
+CLAIM TYPES: ["plant_based", "certification_or_label", "organic_or_natural", "recyclable", "other"]
+SPECIFICITY: specific
+EVIDENCE STRENGTH: strong
+RISK SCORE: 1
+RISK LABEL: low
+EVIDENCE COUNT: 4
+REASONING SUMMARY: The product makes several specific and verifiable sustainability claims, including vegan certification, B Corp certification, FSC certification for packaging, and participation in a packaging recovery scheme. These claims are supported by recognized labels and certifications, reducing greenwashing risk. The claims are specific and measurable rather than vague or sweeping, leading to a low risk score of 1.
+RAW JSON:
+{
+  "claim_detected": true,
+  "claim_modalities": [
+    "text"
+  ],
+  "claim_types": [
+    "plant_based",
+    "certification_or_label",
+    "organic_or_natural",
+    "recyclable",
+    "other"
+  ],
+  "specificity": "specific",
+  "evidence_strength": "strong",
+  "risk_score": 1,
+  "risk_label": "low",
+  "evidence": [
+    {
+      "modality": "text",
+      "snippet": "Végétalien, 100% végétal, Vegan Cert",
+      "explanation": "Clear and specific claim that the product is plant-based and vegan certified."
+    },
+    {
+      "modality": "text",
+      "snippet": "Entreprise B certifiée",
+      "explanation": "Certification indicating social and environmental responsibility."
+    },
+    {
+      "modality": "text",
+      "snippet": "FSC, FSC Mix",
+      "explanation": "Certification related to responsible sourcing of packaging materials."
+    },
+    {
+      "modality": "text",
+      "snippet": "Point Vert",
+      "explanation": "Indicates participation in a packaging recovery scheme, implying recyclability."
+    }
+  ],
+  "reasoning_summary": "The product makes several specific and verifiable sustainability claims, including vegan certification, B Corp certification, FSC certification for packaging, and participation in a packaging recovery scheme. These claims are supported by recognized labels and certifications, reducing greenwashing risk. The claims are specific and measurable rather than vague or sweeping, leading to a low risk score of 1.",
+  "needs_human_check": []
+}
+----------------------------------------------------------------------------------------------------
+METHOD: llm_multimodal
+CLAIM DETECTED: True
+CLAIM MODALITIES: ["text", "image"]
+CLAIM TYPES: ["organic_or_natural", "plant_based", "certification_or_label", "vague_eco_language"]
+SPECIFICITY: mixed
+EVIDENCE STRENGTH: moderate
+RISK SCORE: 2
+RISK LABEL: low
+EVIDENCE COUNT: 2
+REASONING SUMMARY: The product makes explicit sustainability claims related to being 100% plant-based, vegan, and certified by recognized labels such as FSC and B Corp. The ingredient list and absence of additives support natural and health-related claims. The packaging visually supports these claims with clear text. The claims are specific and supported by certifications, reducing greenwashing risk. However, some claims like 'Agriculture UE' and 'Point Vert' are broad and not fully detailed here, so a low risk score is appropriate.
+RAW JSON:
+{
+  "claim_detected": true,
+  "claim_modalities": [
+    "text",
+    "image"
+  ],
+  "claim_types": [
+    "organic_or_natural",
+    "plant_based",
+    "certification_or_label",
+    "vague_eco_language"
+  ],
+  "specificity": "mixed",
+  "evidence_strength": "moderate",
+  "risk_score": 2,
+  "risk_label": "low",
+  "evidence": [
+    {
+      "modality": "text",
+      "snippet": "100% végétal, Végétalien, Végétarien, Source de fibres alimentaires, Source de calcium, Entreprise B certifiée, Agriculture UE, FSC, FSC Mix, Point Vert, Sans conservateurs, Sans sucre ajouté, Sans colorants, Sans lactose, Sans acides gras trans, Sans ajout de produit laitiers, Sans édulcorants, Vegan Cert",
+      "explanation": "Multiple certifications and ingredient claims indicate plant-based, vegan, and some environmental certifications (FSC, B Corp). These are specific and verifiable claims supporting sustainability."
+    },
+    {
+      "modality": "image",
+      "snippet": "alpro OAT all plant, no added sugars Nutri-Score A",
+      "explanation": "The front packaging highlights 'all plant' and 'no added sugars' which supports the plant-based claim. Nutri-Score A indicates a healthier nutritional profile but is not a direct sustainability claim."
+    }
+  ],
+  "reasoning_summary": "The product makes explicit sustainability claims related to being 100% plant-based, vegan, and certified by recognized labels such as FSC and B Corp. The ingredient list and absence of additives support natural and health-related claims. The packaging visually supports these claims with clear text. The claims are specific and supported by certifications, reducing greenwashing risk. However, some claims like 'Agriculture UE' and 'Point Vert' are broad and not fully detailed here, so a low risk score is appropriate.",
+  "needs_human_check": []
+}
+----------------------------------------------------------------------------------------------------

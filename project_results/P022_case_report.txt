@@ -1,0 +1,168 @@
+====================================================================================================
+SAMPLE ID: P022
+PRODUCT: Almond Drink
+BRAND: Bio Organic
+QUERY: organic
+IMAGE URL: https://images.openfoodfacts.org/images/products/405/648/934/6357/front_en.327.400.jpg
+----------------------------------------------------------------------------------------------------
+TEXT BLOB:
+Product name: Almond Drink
+Brand: Bio Organic
+Generic name: Bon Organic Almond drink Sugar-free plant-based
+Ingredients: water, 2,3% almonds', maltodextrins', sea salt, stabilizers: carob seed flour, gellanic gum, emulsifier: sunflower lecithin', natural aroma, 'from organic farming
+Labels: Low or no sugar,Vegetarian,No gluten,Organic,EU Organic,Non-EU Agriculture,Vegan,100% vegetable,EU Agriculture,EU/non-EU Agriculture,European Vegetarian Union,European Vegetarian Union Vegan,FSC,FSC Mix,IT-BIO-009,No added sugar,No lactose,No sugar,Nutriscore,Nutriscore Grade B,Veganok,Triman,de:nachhaltige-verpackt,de:ressourcen-schützen,V-label
+Categories: Beverages and beverages preparations,Plant-based foods and beverages,Beverages,Plant-based foods,Dairy substitutes,Milk substitutes,Nuts and their products,Plant-based beverages,Plant-based milk alternatives,Nut-based drinks,Almond-based drinks,Frühstücke,Getränke,Nüsse-und-nussprodukte,Pflanzliche-getränke,Pflanzliche-lebensmittel-und-getränke
+Packaging:
+----------------------------------------------------------------------------------------------------
+METHOD: heuristic_text
+CLAIM DETECTED: True
+CLAIM MODALITIES: ["text"]
+CLAIM TYPES: ["organic_or_natural", "plant_based", "certification_or_label"]
+SPECIFICITY: vague
+EVIDENCE STRENGTH: weak
+RISK SCORE: 3
+RISK LABEL: medium
+EVIDENCE COUNT: 3
+REASONING SUMMARY: Heuristic baseline matched sustainability-related keywords in text.
+RAW JSON:
+{
+  "claim_detected": true,
+  "claim_modalities": [
+    "text"
+  ],
+  "claim_types": [
+    "organic_or_natural",
+    "plant_based",
+    "certification_or_label"
+  ],
+  "specificity": "vague",
+  "evidence_strength": "weak",
+  "risk_score": 3,
+  "risk_label": "medium",
+  "evidence": [
+    {
+      "modality": "text",
+      "snippet": "organic",
+      "explanation": "Keyword matched in product text."
+    },
+    {
+      "modality": "text",
+      "snippet": "plant-based",
+      "explanation": "Keyword matched in product text."
+    },
+    {
+      "modality": "text",
+      "snippet": "fsc",
+      "explanation": "Keyword matched in product text."
+    }
+  ],
+  "reasoning_summary": "Heuristic baseline matched sustainability-related keywords in text.",
+  "needs_human_check": [
+    "Heuristic baseline may miss image-only cues and nuanced wording."
+  ]
+}
+----------------------------------------------------------------------------------------------------
+METHOD: llm_text
+CLAIM DETECTED: True
+CLAIM MODALITIES: ["text"]
+CLAIM TYPES: ["organic_or_natural", "plant_based", "certification_or_label", "carbon_or_climate"]
+SPECIFICITY: specific
+EVIDENCE STRENGTH: strong
+RISK SCORE: 1
+RISK LABEL: low
+EVIDENCE COUNT: 3
+REASONING SUMMARY: The product makes multiple specific and verifiable sustainability claims including organic certification, plant-based ingredients, and sustainable packaging certifications. These claims are supported by recognized labels and certifications, reducing greenwashing risk. The presence of multiple certifications and specific ingredient percentages supports a low risk score. No vague or broad claims are present.
+RAW JSON:
+{
+  "claim_detected": true,
+  "claim_modalities": [
+    "text"
+  ],
+  "claim_types": [
+    "organic_or_natural",
+    "plant_based",
+    "certification_or_label",
+    "carbon_or_climate"
+  ],
+  "specificity": "specific",
+  "evidence_strength": "strong",
+  "risk_score": 1,
+  "risk_label": "low",
+  "evidence": [
+    {
+      "modality": "text",
+      "snippet": "Organic, EU Organic, from organic farming, IT-BIO-009",
+      "explanation": "The product is certified organic with specific certifications and codes, indicating a verifiable claim about organic sourcing."
+    },
+    {
+      "modality": "text",
+      "snippet": "Sugar-free plant-based, Vegan, Vegetarian, 100% vegetable",
+      "explanation": "Clear claims about the product being plant-based and suitable for vegan and vegetarian diets, which are specific and verifiable."
+    },
+    {
+      "modality": "text",
+      "snippet": "Labels: FSC, FSC Mix, de:nachhaltige-verpackt, de:ressourcen-schützen",
+      "explanation": "Presence of FSC certification and German labels indicating sustainable packaging and resource protection, supporting environmental claims."
+    }
+  ],
+  "reasoning_summary": "The product makes multiple specific and verifiable sustainability claims including organic certification, plant-based ingredients, and sustainable packaging certifications. These claims are supported by recognized labels and certifications, reducing greenwashing risk. The presence of multiple certifications and specific ingredient percentages supports a low risk score. No vague or broad claims are present.",
+  "needs_human_check": []
+}
+----------------------------------------------------------------------------------------------------
+METHOD: llm_multimodal
+CLAIM DETECTED: True
+CLAIM MODALITIES: ["text", "image"]
+CLAIM TYPES: ["organic_or_natural", "plant_based", "carbon_or_climate", "certification_or_label", "vague_eco_language"]
+SPECIFICITY: mixed
+EVIDENCE STRENGTH: moderate
+RISK SCORE: 3
+RISK LABEL: medium
+EVIDENCE COUNT: 4
+REASONING SUMMARY: The product makes several explicit sustainability claims including organic certification, plant-based and vegan status, and packaging certifications like FSC. These claims are specific and supported by recognized labels, though some labels are not fully detailed. The presence of multiple certifications and ingredient sourcing claims reduces greenwashing risk. However, some claims like 'Bio Organic' and 'Vegan' are broad and common, and the packaging sustainability claims are not fully detailed, leading to a moderate risk score.
+RAW JSON:
+{
+  "claim_detected": true,
+  "claim_modalities": [
+    "text",
+    "image"
+  ],
+  "claim_types": [
+    "organic_or_natural",
+    "plant_based",
+    "carbon_or_climate",
+    "certification_or_label",
+    "vague_eco_language"
+  ],
+  "specificity": "mixed",
+  "evidence_strength": "moderate",
+  "risk_score": 3,
+  "risk_label": "medium",
+  "evidence": [
+    {
+      "modality": "text",
+      "snippet": "from organic farming, Organic, EU Organic, IT-BIO-009",
+      "explanation": "Explicit organic certification claims indicate the product is made with organic ingredients, which is a specific and verifiable sustainability claim."
+    },
+    {
+      "modality": "text",
+      "snippet": "Sugar-free plant-based, Vegan, Vegetarian, No gluten, No lactose, 100% vegetable",
+      "explanation": "Claims about being plant-based, vegan, and free from certain ingredients suggest environmental and health positioning, moderately specific but common claims."
+    },
+    {
+      "modality": "text",
+      "snippet": "Labels including FSC, de:nachhaltige-verpackt, de:ressourcen-schützen",
+      "explanation": "Presence of FSC label and German sustainability packaging/resource protection labels imply some environmental consideration in packaging, but details are not fully visible or explained."
+    },
+    {
+      "modality": "image",
+      "snippet": "Bio Organic, Vegan logo, Almond image, 'No sugars'",
+      "explanation": "Visual cues reinforce organic and vegan claims, and the almond image supports plant-based nature; 'No sugars' is a health claim, not sustainability."
+    }
+  ],
+  "reasoning_summary": "The product makes several explicit sustainability claims including organic certification, plant-based and vegan status, and packaging certifications like FSC. These claims are specific and supported by recognized labels, though some labels are not fully detailed. The presence of multiple certifications and ingredient sourcing claims reduces greenwashing risk. However, some claims like 'Bio Organic' and 'Vegan' are broad and common, and the packaging sustainability claims are not fully detailed, leading to a moderate risk score.",
+  "needs_human_check": [
+    "Verification of the authenticity and scope of the FSC and German sustainability packaging labels",
+    "Clarification on the extent of organic ingredient sourcing beyond the 2.3% almonds mentioned"
+  ]
+}
+----------------------------------------------------------------------------------------------------
