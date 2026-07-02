@@ -1,0 +1,12 @@
+# Core pipeline (Greenwashing_Radar_Final.ipynb)
+openai>=1.0.0
+openfoodfacts==5.0.1
+pandas
+numpy
+matplotlib
+scikit-learn
+tqdm
+ipython
+
+# Only needed for the optional live demo (app.py)
+streamlit
