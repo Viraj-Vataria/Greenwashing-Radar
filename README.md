@@ -8,7 +8,7 @@ Greenwashing making a product look more environmentally friendly than it really 
 
 **Greenwashing Radar** uses a multimodal Large Language Model to read both the **text** and the **packaging image** of a product, then returns a structured, explainable assessment: what claims were made, how specific they are, and a **greenwashing risk score (0–5)** with a written justification and the exact evidence it relied on.
 
-> Built as the final project for **COM2019 – Programming for Prompt Engineering** (University of Exeter). Awarded **82 / 100 (First class)**.
+> Built as the final project for **COM2019 – Programming for Prompt Engineering** (University of Exeter). Awarded **First class**.
 
 ---
 
